@@ -1,8 +1,10 @@
 # SocialPulse
 
-SocialPulse is an analytics tool that leverages Langflow and Astra DB to provide easy-to-understand analysis of datasets. The flow, named `SocialPulse_flow`, uses the Groq API to process and interpret data, providing users with meaningful insights.
+Important Note: We were required to use GPT models for this project. However, since we did not have access to the OpenAI API, we used the Groq API as a substitute. The flow can easily be modified to use OpenAI models instead of Groq wherever applicable, by simply replacing the Groq component with an OpenAI model component. This change may enhance the quality of responses, as GPT models tend to provide more nuanced and contextual answers.
 
 ## Overview
+SocialPulse is an analytics tool that leverages Langflow and Astra DB to provide easy-to-understand analysis of datasets. The flow, named SocialPulse_flow, uses the Groq API (or OpenAI models, with slight modifications) to process and interpret data, providing users with meaningful insights.
+
 The `SocialPulse_flow` is built using the following components and logic:
 
 1. **Load File**
@@ -27,7 +29,7 @@ The `SocialPulse_flow` is built using the following components and logic:
 
      Your goal is to provide a clear, helpful, and concise response to the user. Avoid showing calculations or overly detailed explanations. Focus on summarizing the results in a way that is easy for a non-technical user to understand.
      ```
-7. **Groq Component**
+7. **Groq Component(or OpenAI Model)**
    - Acts as the system message for the custom prompt.
    - Processes user chat input and provides the final output.
 
@@ -45,7 +47,15 @@ Below is a step-by-step explanation of how the flow works:
 4. **Astra DB Search**: The chunks and the chat query are processed using Astra DB's vectorization (NVIDIA as the provider), and relevant search results are retrieved.
 5. **Parse Results**: The retrieved results are parsed for better readability.
 6. **Custom Prompt**: The parsed results and user query are passed through a custom prompt to generate a concise, non-technical response.
-7. **Groq API**: The Groq component takes the system message and chat input to produce the final output.
+7. **Groq API(or OpenAI Model)**: The Groq component takes the system message and chat input to produce the final output.
+
+
+## Expected Output Changes if Using OpenAI Instead of Groq
+If the Groq component is replaced with an OpenAI model component, we can expect:
+
+- Improved Context Understanding: OpenAI models, such as GPT-4, are more advanced and capable of interpreting nuanced queries, resulting in more accurate and comprehensive responses.
+- Better Language Quality: The responses will likely be more refined and user-friendly, with better phrasing and tone adjustments.
+- Enhanced Query Handling: OpenAI models may handle ambiguous or complex user queries more effectively than the Groq component.
 
 ![FLOW](ASSETS/FLOW/flow.png)
 
@@ -69,7 +79,7 @@ Below is a step-by-step explanation of how the flow works:
 My tam-mate @dikjain has created a user-friendly website usig React to connect to this flow for easier usage. The website will:
 
 1. Take user input through a simple chat interface.
-2. Hit the API endpoint of the SocialPulse_flow.
+2. Hit the API endpoint of the **SocialPulse_flow**.
 3. Display the chat output from the flow directly on the website.
 
 ## Demo:
@@ -79,7 +89,7 @@ My tam-mate @dikjain has created a user-friendly website usig React to connect t
 To use this flow with Langflow, follow these steps:
 
 1. Upload the JSON configuration for SocialPulse_flow in Langflow.
-2. Ensure you have the corresponding Groq API key integrated within the flow for smooth execution.
+2. Ensure you have the corresponding Groq API key(or OpenAI API key if switched) integrated within the flow for smooth execution.
 3. Add the input data (such as your dataset) as required by the flow.
 
 ## Prerequisites
