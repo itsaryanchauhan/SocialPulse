@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.glass {
+  @apply bg-opacity-20 backdrop-filter backdrop-blur-lg border border-blue-400/20 shadow-xl;
+}
+
+.glass-sidebar {
+  @apply bg-blue-950/30 backdrop-filter backdrop-blur-xl border-r border-blue-400/20;
+}
+
+.glass-card {
+  @apply bg-blue-900/10 backdrop-filter backdrop-blur-md border border-blue-400/20 shadow-lg;
+}
+
+.glass-input {
+  @apply bg-blue-900/20 backdrop-filter backdrop-blur-sm border border-blue-400/30;
+}
+
+::-webkit-scrollbar {
+  
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-blue-900/10;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-400/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue-400/50;
+}

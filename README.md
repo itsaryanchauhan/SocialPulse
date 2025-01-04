@@ -66,11 +66,14 @@ Below is a step-by-step explanation of how the flow works:
 ![4](ASSETS/CHAT_SCREENSHOTS/4.png) 
 
 ## Integrating with Website:
-My tam-mate @dikjain is currently working on creating a user-friendly website usig React to connect to this flow for easier usage. The website will:
+My tam-mate @dikjain has created a user-friendly website usig React to connect to this flow for easier usage. The website will:
 
 1. Take user input through a simple chat interface.
 2. Hit the API endpoint of the SocialPulse_flow.
 3. Display the chat output from the flow directly on the website.
+
+## Demo:
+[Video Demo](<ASSETS/Video Demo/website.mkv>)
 
 ## Langflow Setup:
 To use this flow with Langflow, follow these steps:
