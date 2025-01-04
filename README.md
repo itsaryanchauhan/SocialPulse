@@ -73,7 +73,7 @@ My tam-mate @dikjain has created a user-friendly website usig React to connect t
 3. Display the chat output from the flow directly on the website.
 
 ## Demo:
-[Video Demo](<ASSETS/Video Demo/website.mkv>)
+[![VIDEO DEMO](https://img.youtube.com/vi/35x57256OoM/0.jpg)](https://www.youtube.com/watch?v=35x57256OoM)
 
 ## Langflow Setup:
 To use this flow with Langflow, follow these steps:
